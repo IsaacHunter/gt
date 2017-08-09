@@ -1,0 +1,19 @@
+ul.questions {
+	margin-top: 10px;
+}
+
+div.question-item p {
+	margin-bottom: 0;
+}
+
+a.results-link {
+	float: right;
+}
+
+/* Results page */
+
+#container-results {
+	margin-top: 20px;
+}
+
+

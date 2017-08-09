@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Greater Than Challenge</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@_AustinDick">
+    <meta name="twitter:creator" content="@_AustinDick">
+    <meta name="twitter:title" content="The Greater Than Challenge - NHL Logo Redesigns">
+    <meta name="twitter:description" content="Every week we release three minimalist re-designs of a classic NHL logo. Now we need you to tell us which design is the best! Vote to tell us which logo is greater than the others.">
+    <meta name="twitter:image" content="http://static1.squarespace.com/static/541cefe6e4b02b7c37efbab1/563009a9e4b0ab11519bde83/56301558e4b0f983f5780c16/1445991774948/greaterthan1.png?format=1500w">
+
+    
+    <!--  
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage 
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+        
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+            
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/admin-site.css">
+    <link rel="stylesheet" href="/styles/album.css">
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/font-awesome.css">
+    <link rel="stylesheet" href="/styles/gt.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/skeleton.css">
+    <link rel="stylesheet" href="/styles/sweetalert.css">
+    <!--STYLES END-->
+    
+    <!-- Default home page -->
+    <style>
+    /* latin */
+    @font-face {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 300;
+      src: local('Raleway Light'), local('Raleway-Light'), url(http://fonts.gstatic.com/s/raleway/v9/-_Ctzj9b56b8RgXW8FAriQzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Raleway'), url(http://fonts.gstatic.com/s/raleway/v9/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 600;
+      src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(http://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12bwzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    }
+    body {
+      margin: 0;
+    }
+    h6, h4 {
+        color: #939393;
+    }
+    h6, .title {
+        text-transform: uppercase;
+        text-align: center;
+    }
+    b {
+        color: #222;
+    }
+    a {
+        cursor: pointer;
+    }
+    hr {
+      margin-top: 10rem;
+      margin-bottom: 10.5rem;
+    }
+    .hidden {
+      display: none;
+    }
+    .burger-buns{
+      padding: 80px 0;
+    }
+    .topper {
+        width: 100%;
+        padding: 6px 0;
+        background: #f0f0f0;
+    }
+    .gt-logo {
+        width: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .gt-badge {
+        margin-top: 22%;
+        text-align: center;
+    }
+    .thumbnail {
+        padding: 40px;
+        background: #fff;
+        border-radius: 5px;
+    }
+    .ballot .thumbnail {
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    .ballot .button {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      display: block;
+    }
+    .img-circle {
+      border-radius: 500px;
+    }
+    .portrait {
+      height: auto;
+      max-width: 175px;
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+    .last-week-img {
+      margin: 0 auto;
+      display: block;
+      border-radius: 10px;
+    }
+    .runner-up {
+      height: auto;
+      max-width: 220px;
+      width: 100%;
+    }
+    .winner {
+      height: auto;
+      max-width: 220px;
+      width: 100%;
+    }
+    .title {
+      font-size: 13px;
+      letter-spacing: 2px;
+      padding: 5px 0;
+      margin-top: 10px;
+    }
+    .footer {
+      color: #bbbbbb; 
+      font-size: 11px; 
+      margin-top: 60px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .white {
+      color: #fff;
+    }
+    .gt-past-designs {
+      font-size: 1.25rem;
+    }
+    .gt-past-designs a {
+      text-decoration: none;
+      padding: 2px;
+      color: #ddd;
+      cursor: default;
+    }
+    .gt-past-designs a:hover {
+      color: #ddd;
+    }
+    .gt-past-designs a.gt-designed {
+      color: #939393;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .gt-past-designs a.gt-designed:hover {
+      color: #333;
+      font-weight: bold;
+    }
+    .gt-past-designs a.active {
+      color: #333;
+      font-weight: bold;
+    }
+    .gt-past-designs a.active:hover {
+      color: #333;
+    }
+    .gt-one {
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .gt-badge {
+            padding-left: 15%;
+        }
+        .runner-up{
+          
+        }
+    }
+    @media (min-width: 550px) {
+        .four.columns {
+            width: 33.33333333%;
+        }
+        .gt-results .gt-one {
+          left: 30.666667%;
+          position: relative;
+          margin-left: 4%;
+        }
+        .gt-results .gt-two {
+          position: relative;
+          left: -34.6666666667%;
+          margin-left: 0;
+        }
+        
+    }
+    
+    .sweet-alert button {
+      height: auto;
+    }
+    /*    .main img {
+            width: 33.33333333%;
+            float: left;
+        }*/
+    </style>
+
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can 
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+      
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+          
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+    
+    <!--SCRIPTS-->
+    <script src="/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/vendor/bootstrap.min.js"></script>
+    <script src="/js/vendor/highcharts.js"></script>
+    <script src="/js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="/js/vendor/sweetalert-dev.js"></script>
+    <script src="/js/vendor/sweetalert.min.js"></script>
+    <!--SCRIPTS END-->
+
+  </head>
+
+  <body>
+    <%- partial ('helpers/header.ejs') %>
+    
+    <%- body %>
+
+    <%- partial ('helpers/footer.ejs') %>
+
+    <!--
+        Client-side Templates
+        ========================
+
+        HTML templates are important prerequisites of modern, rich client applications.
+        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
+        that you load these templates client-side.
+
+        By default, your Gruntfile is configured to automatically load and precompile
+        client-side JST templates in your `assets/templates` folder, then
+        include them here automatically (between TEMPLATES and TEMPLATES END).
+        
+        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Import templates from other directories
+            + Use a different template engine (handlebars, jade, dust, etc.)
+            + Internationalize your client-side templates using a server-side
+              stringfile before they're served.
+    -->
+
+    <!--TEMPLATES-->
+    
+    <!--TEMPLATES END-->
+    
+  </body>
+</html>
